@@ -36,18 +36,23 @@ async function getPokemon(searchValue){
         }
     })
     
-    const pokeDex = pokemons.forEach(async pokemon => {
+    const pokeDex = await []
+    const pokeMan = pokemons.forEach(async pokemon => {
+        
         const data = await apiFetcher(POKEMONPATH+pokemon,"PokemonsForEach")
-        const details =
+
         if(data.is_default){
-            const details ={
-                name:data.name,
-            }
+                const poke ={
+                    name:data.name
+
+                }
+                return
+                
             
         }
-        return details
+        
+        
     });
-    
     
     
 }
