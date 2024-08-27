@@ -59,6 +59,7 @@ async function searchPokemon(searchValue) {
                 }
             })
         })
+        
 
     };pokemonDetails(pokeNames);
     
